@@ -82,7 +82,11 @@
 
       .profile-header { display: grid; grid-template-columns: 128px minmax(0, 1fr); align-items: center; gap: 1.25rem; padding-block: 4rem 3.25rem; }
       .profile-avatar { width: 128px; height: 128px; overflow: hidden; border: 1px solid rgba(137, 255, 159, 0.26); border-radius: 9999px; background: radial-gradient(circle at 50% 35%, rgba(137, 255, 159, 0.2), transparent 62%), #191d19; box-shadow: 0 0 0 8px rgba(137, 255, 159, 0.04), 0 0 42px rgba(137, 255, 159, 0.1); }
+<<<<<<< HEAD
       .profile-avatar svg { display: block; width: 100%; height: 100%; }
+=======
+      .profile-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
+>>>>>>> 6d2f004 (Actualizar index y foto de perfil)
       .eyebrow { display: inline-flex; align-items: center; gap: 0.45rem; margin-bottom: 0.65rem; color: var(--green); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
       .eyebrow::before { width: 0.42rem; height: 0.42rem; border-radius: 9999px; background: var(--green); box-shadow: 0 0 0 4px rgba(137, 255, 159, 0.1); content: ''; }
       .profile-name { margin: 0; color: var(--text); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15; font-weight: 700; letter-spacing: -0.04em; }
@@ -238,6 +242,7 @@
 
     <main id="inicio" class="shell">
       <header class="profile-header">
+<<<<<<< HEAD
         <div class="profile-avatar" role="img" aria-label="Ilustración abstracta de infraestructura de sistemas">
           <svg viewBox="0 0 128 128" fill="none" aria-hidden="true">
             <circle cx="64" cy="64" r="63" fill="#151a16" />
@@ -251,6 +256,10 @@
             <circle cx="77" cy="25" r="3" fill="#89ff9f" fill-opacity=".2" stroke="#89ff9f" />
             <path d="M23 93h82" stroke="#89ff9f" stroke-opacity=".22" />
           </svg>
+=======
+        <div class="profile-avatar">
+          <img src="img/perfil.webp" alt="Fotografía de Andrés Eduardo Molina Ramírez" />
+>>>>>>> 6d2f004 (Actualizar index y foto de perfil)
         </div>
         <div>
           <div class="eyebrow">Disponible para contratación / proyectos</div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CV, EMAIL, GITHUB, LINKEDIN, skillGroups, translations } from './data.js';
+import { TbBrandCSharp } from 'react-icons/tb';
 
 function Icon({ name, className = '', label }) {
   const base = { className, viewBox: '0 0 24 24', fill: 'none' };
@@ -25,7 +26,7 @@ function Icon({ name, className = '', label }) {
     case 'html': return <svg {...base} {...accessible}><path d="M4 3.5h16l-1.6 13.5L12 21l-6.4-4L4 3.5Z" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /><text x="12" y="14.8" fill="currentColor" fontFamily="system-ui, sans-serif" fontWeight="900" fontSize="10.5" textAnchor="middle">5</text></svg>;
     case 'css': return <svg {...base} {...accessible}><path d="M4 3.5h16l-1.6 13.5L12 21l-6.4-4L4 3.5Z" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /><text x="12" y="14.8" fill="currentColor" fontFamily="system-ui, sans-serif" fontWeight="900" fontSize="10.5" textAnchor="middle">3</text></svg>;
     case 'javascript': return <span className="js-mark" aria-hidden="true">JS</span>;
-    case 'csharp': return <svg {...base} {...accessible}><title>C#</title><path d="M12 1.75 20.5 6.65v9.7L12 21.25l-8.5-4.9v-9.7L12 1.75Z" fill="currentColor" /><text x="12" y="15.05" fill="#0b0b0b" fontFamily="system-ui, sans-serif" fontSize="7" fontWeight="900" textAnchor="middle">C#</text></svg>;
+    case 'csharp': return <TbBrandCSharp className={className} {...accessible} />;
     case 'git': return <svg {...base} {...accessible} viewBox="0 0 24 24" fill="currentColor"><path d="m21.62 11.06-8.68-8.68a1.3 1.3 0 0 0-1.84 0L9.2 4.28l2.33 2.33a1.55 1.55 0 0 1 1.96 1.97l2.24 2.24a1.55 1.55 0 1 1-.93.93l-2.1-2.1v5.54a1.56 1.56 0 1 1-1.28-.06V9.47a1.55 1.55 0 0 1-.84-2.03L8.3 5.13 2.38 11.06a1.3 1.3 0 0 0 0 1.84l8.68 8.68a1.3 1.3 0 0 0 1.84 0l8.72-8.68a1.3 1.3 0 0 0 0-1.84Z" /></svg>;
     case 'code': return <svg {...base} {...accessible} {...stroke}><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14" /></svg>;
     case 'database': return <svg {...base} {...accessible} {...stroke}><ellipse cx="12" cy="5" rx="7" ry="3" /><path d="M5 5v7c0 1.66 3.13 3 7 3s7-1.34 7-3V5M5 12v7c0 1.66 3.13 3 7 3s7-1.34 7-3v-7" /></svg>;

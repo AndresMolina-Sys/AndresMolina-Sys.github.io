@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portafolio de Andrés Eduardo Molina Ramírez, Ingeniero de Sistemas e IT Specialist en infraestructura, virtualización, redes y soporte técnico." />
-    <meta name="theme-color" content="#111210" />
+    <meta name="theme-color" content="#0b0b0b" />
     <meta property="og:title" content="Andrés Eduardo Molina Ramírez · Portafolio" />
     <meta property="og:description" content="Infraestructura, virtualización, redes y soporte técnico para operaciones más estables." />
     <meta property="og:type" content="website" />
@@ -17,10 +17,11 @@
           extend: {
             colors: {
               portfolio: {
-                ink: '#111210',
-                panel: '#181a17',
-                green: '#89ff9f',
-                text: '#eceeec'
+                ink: '#0b0b0b',
+                panel: '#141414',
+                orange: '#f97316',
+                coral: '#ff7a59',
+                text: '#ffffff'
               }
             },
             fontFamily: {
@@ -33,69 +34,72 @@
 
     <style>
       :root {
-        --ink: #111210;
-        --panel: #181a17;
-        --text: rgba(255, 255, 255, 0.92);
-        --muted: rgba(255, 255, 255, 0.64);
-        --faint: rgba(255, 255, 255, 0.42);
-        --border: rgba(255, 255, 255, 0.16);
-        --border-soft: rgba(255, 255, 255, 0.09);
-        --green: #89ff9f;
-        --green-soft: rgba(137, 255, 159, 0.12);
-        --green-strong: #5bd875;
+        --ink: #0b0b0b;
+        --panel: #141414;
+        --text: #ffffff;
+        --muted: #a3a3a3;
+        --faint: #737373;
+        --border: #2a2a2a;
+        --border-soft: #202020;
+        --orange: #f97316;
+        --orange-soft: rgba(249, 115, 22, 0.12);
+        --orange-strong: #ff7043;
+        --coral: #ff7a59;
       }
 
       html { scroll-behavior: smooth; }
       body { background: var(--ink); color: var(--text); }
-      ::selection { background: rgba(137, 255, 159, 0.28); color: var(--text); }
+      ::selection { background: rgba(249, 115, 22, 0.28); color: var(--text); }
       a, button { -webkit-tap-highlight-color: transparent; }
-      a:focus-visible, button:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+      a:focus-visible, button:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
 
       .shell { width: min(100% - 4rem, 1152px); margin-inline: auto; }
       .section-heading { margin: 0; color: var(--text); font-size: 1.5rem; line-height: 1.25; font-weight: 700; letter-spacing: -0.025em; }
       .section-divider { border-top: 1px solid var(--border); }
       .muted { color: var(--muted); }
       .faint { color: var(--faint); }
-      .green { color: var(--green); }
-      .soft-green { color: rgba(137, 255, 159, 0.82); }
+      .orange { color: var(--orange); }
+      .soft-orange { color: rgba(249, 115, 22, 0.82); }
 
       .site-nav {
         position: sticky;
         top: 0;
         z-index: 20;
         border-bottom: 1px solid var(--border-soft);
-        background: rgba(17, 18, 16, 0.9);
+        background: rgba(11, 11, 11, 0.9);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
       }
       .nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 56px; gap: 1rem; }
       .nav-brand { color: var(--text); font-size: 0.9rem; font-weight: 700; letter-spacing: -0.01em; white-space: nowrap; }
-      .nav-brand span { color: var(--green); }
+      .nav-brand span { color: var(--orange); }
       .nav-links { display: flex; align-items: center; gap: 1.1rem; }
       .nav-links a { color: var(--faint); font-size: 0.76rem; font-weight: 600; transition: color 160ms ease; }
-      .nav-links a:hover { color: var(--green); }
-      .nav-contact { display: inline-flex; align-items: center; gap: 0.45rem; border: 1px solid rgba(137, 255, 159, 0.28); border-radius: 999px; padding: 0.42rem 0.75rem; color: var(--green); font-size: 0.73rem; font-weight: 700; transition: background 160ms ease, border-color 160ms ease, transform 160ms ease; }
-      .nav-contact:hover { border-color: rgba(137, 255, 159, 0.52); background: var(--green-soft); transform: translateY(-1px); }
-      .mobile-nav-toggle { display: none; border: 1px solid var(--border); border-radius: 6px; padding: 0.4rem; color: var(--green); background: transparent; }
+      .nav-links a:hover { color: var(--orange); }
+      .nav-contact { display: inline-flex; align-items: center; gap: 0.45rem; border: 1px solid rgba(249, 115, 22, 0.28); border-radius: 999px; padding: 0.42rem 0.75rem; color: var(--orange); font-size: 0.73rem; font-weight: 700; transition: background 160ms ease, border-color 160ms ease, transform 160ms ease; }
+      .nav-contact:hover { border-color: rgba(249, 115, 22, 0.52); background: var(--orange-soft); transform: translateY(-1px); }
+      .language-toggle { display: inline-flex; min-width: 2.4rem; align-items: center; justify-content: center; border: 1px solid rgba(249, 115, 22, 0.28); border-radius: 999px; padding: 0.42rem 0.65rem; color: var(--orange); background: transparent; font-size: 0.73rem; font-weight: 800; letter-spacing: 0.04em; transition: background 160ms ease, border-color 160ms ease, transform 160ms ease; }
+      .language-toggle:hover { border-color: rgba(249, 115, 22, 0.7); background: var(--orange-soft); transform: translateY(-1px); }
+      .mobile-nav-toggle { display: none; border: 1px solid var(--border); border-radius: 6px; padding: 0.4rem; color: var(--orange); background: transparent; }
       .mobile-nav { display: none; border-top: 1px solid var(--border-soft); padding-block: 0.65rem 0.85rem; }
       .mobile-nav a { display: block; padding: 0.5rem 0; color: var(--muted); font-size: 0.83rem; font-weight: 600; }
 
       .profile-header { display: grid; grid-template-columns: 128px minmax(0, 1fr); align-items: center; gap: 1.25rem; padding-block: 4rem 3.25rem; }
-      .profile-avatar { width: 128px; height: 128px; overflow: hidden; border: 1px solid rgba(137, 255, 159, 0.26); border-radius: 9999px; background: radial-gradient(circle at 50% 35%, rgba(137, 255, 159, 0.2), transparent 62%), #191d19; box-shadow: 0 0 0 8px rgba(137, 255, 159, 0.04), 0 0 42px rgba(137, 255, 159, 0.1); }
+      .profile-avatar { width: 128px; height: 128px; overflow: hidden; border: 1px solid rgba(249, 115, 22, 0.32); border-radius: 9999px; background: radial-gradient(circle at 50% 35%, rgba(249, 115, 22, 0.2), transparent 62%), #171717; box-shadow: 0 0 0 8px rgba(249, 115, 22, 0.04), 0 0 42px rgba(249, 115, 22, 0.1); }
       .profile-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
-      .eyebrow { display: inline-flex; align-items: center; gap: 0.45rem; margin-bottom: 0.65rem; color: var(--green); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
-      .eyebrow::before { width: 0.42rem; height: 0.42rem; border-radius: 9999px; background: var(--green); box-shadow: 0 0 0 4px rgba(137, 255, 159, 0.1); content: ''; }
+      .eyebrow { display: inline-flex; align-items: center; gap: 0.45rem; margin-bottom: 0.65rem; color: var(--orange); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+      .eyebrow::before { width: 0.42rem; height: 0.42rem; border-radius: 9999px; background: var(--orange); box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1); content: ''; }
       .profile-name { margin: 0; color: var(--text); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15; font-weight: 700; letter-spacing: -0.04em; }
       .profile-role { margin-top: 0.3rem; color: var(--text); font-size: clamp(1rem, 2vw, 1.25rem); line-height: 1.35; font-weight: 700; }
       .profile-location { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.55rem; color: var(--muted); font-size: 0.9rem; }
       .profile-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem; margin-top: 0.8rem; }
-      .contact-pill, .icon-action { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(137, 255, 159, 0.34); color: var(--green); background: transparent; transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease; }
+      .contact-pill, .icon-action { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(249, 115, 22, 0.34); color: var(--orange); background: transparent; transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease; }
       .contact-pill { gap: 0.5rem; border-radius: 9999px; padding: 0.45rem 0.8rem; font-size: 0.78rem; font-weight: 700; }
-      .contact-pill:hover, .icon-action:hover { border-color: rgba(137, 255, 159, 0.7); background: var(--green-soft); transform: translateY(-1px); }
+      .contact-pill:hover, .icon-action:hover { border-color: rgba(249, 115, 22, 0.7); background: var(--orange-soft); transform: translateY(-1px); }
       .icon-action { width: 2.1rem; height: 2.1rem; border-radius: 9999px; }
       .icon-action svg, .contact-pill svg, .profile-location svg { width: 1rem; height: 1rem; }
       .availability { display: inline-flex; align-items: center; gap: 0.4rem; margin-left: 0.25rem; color: var(--faint); font-size: 0.75rem; }
-      .availability::before { width: 0.4rem; height: 0.4rem; border-radius: 9999px; background: var(--green); content: ''; }
+      .availability::before { width: 0.4rem; height: 0.4rem; border-radius: 9999px; background: var(--orange); content: ''; }
 
       section { scroll-margin-top: 5rem; }
       .about-section { padding-bottom: 2.3rem; }
@@ -103,35 +107,37 @@
       .about-copy + .about-copy { margin-top: 0.6rem; color: var(--muted); font-size: 0.92rem; }
       .about-facts { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1rem; }
       .fact { border: 1px solid var(--border-soft); border-radius: 9999px; padding: 0.4rem 0.7rem; color: var(--muted); background: rgba(255,255,255,0.02); font-size: 0.74rem; }
-      .fact strong { color: var(--green); }
+      .fact strong { color: var(--orange); }
 
       .skills-section { padding-block: 2.3rem 0.7rem; }
       .skill-list { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.9rem; }
-      .skill-pill { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid rgba(137, 255, 159, 0.12); border-radius: 9999px; padding: 0.48rem 0.75rem; color: rgba(137, 255, 159, 0.84); background: var(--green-soft); font-size: 0.78rem; font-weight: 700; transition: border-color 160ms ease, background 160ms ease, transform 160ms ease; }
-      .skill-pill:hover { border-color: rgba(137, 255, 159, 0.38); background: rgba(137, 255, 159, 0.17); transform: translateY(-1px); }
-      .skill-pill svg { width: 1rem; height: 1rem; color: var(--green); }
+      .skill-pill { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid #303030; border-radius: 9999px; padding: 0.48rem 0.75rem; color: #e5e5e5; background: #202020; font-size: 0.78rem; font-weight: 700; transition: border-color 160ms ease, background 160ms ease, transform 160ms ease; }
+      .skill-pill:hover { border-color: rgba(249, 115, 22, 0.38); background: rgba(249, 115, 22, 0.12); transform: translateY(-1px); }
+      .skill-pill svg { width: 1rem; height: 1rem; color: var(--orange); }
       .skill-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem 2rem; margin-top: 1.25rem; }
       .skill-group-title { margin: 0 0 0.55rem; color: var(--muted); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+      #habilidades .group > svg, #habilidades .group > img, #habilidades .group > span:first-child { transition: transform 180ms ease, filter 180ms ease, color 180ms ease; }
+      #habilidades .group:hover > svg, #habilidades .group:hover > img, #habilidades .group:hover > span:first-child { color: var(--orange); filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.55)); transform: translateY(-1px) scale(1.08); }
 
       .experience-section, .projects-section, .education-section { padding-top: 3rem; }
       .record-list { display: grid; gap: 0; margin-top: 1.1rem; }
       .record { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: start; gap: 1rem; padding-block: 0.75rem 1.05rem; }
-      .record-icon { display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; border-radius: 9999px; color: var(--green); background: var(--green-soft); }
+      .record-icon { display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; border-radius: 9999px; color: var(--orange); background: var(--orange-soft); }
       .record-icon svg { width: 1.35rem; height: 1.35rem; }
       .record-title { margin: 0; color: var(--text); font-size: 0.95rem; line-height: 1.35; font-weight: 700; }
       .record-subtitle { margin-top: 0.32rem; color: var(--text); font-size: 0.88rem; line-height: 1.45; }
       .record-description { max-width: 38rem; margin-top: 0.48rem; color: var(--faint); font-size: 0.8rem; line-height: 1.6; }
-      .record-date { justify-self: end; border-radius: 9999px; padding: 0.23rem 0.55rem; color: rgba(137, 255, 159, 0.82); background: var(--green-soft); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.68rem; line-height: 1.2; white-space: nowrap; }
+      .record-date { justify-self: end; border-radius: 9999px; padding: 0.23rem 0.55rem; color: rgba(249, 115, 22, 0.9); background: var(--orange-soft); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.68rem; line-height: 1.2; white-space: nowrap; }
       .record.featured { margin-top: 0.25rem; border-top: 1px solid var(--border-soft); padding-top: 1.3rem; }
-      .record.featured .record-icon { background: rgba(137, 255, 159, 0.17); }
+      .record.featured .record-icon { background: rgba(249, 115, 22, 0.17); }
       .record-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.65rem; }
       .record-tag { border: 1px solid var(--border-soft); border-radius: 9999px; padding: 0.25rem 0.5rem; color: var(--faint); font-size: 0.67rem; }
 
       .project-list { display: grid; gap: 1.15rem; margin-top: 1.25rem; }
       .project { display: grid; grid-template-columns: 48px minmax(0, 1fr) 300px; align-items: center; gap: 1rem; min-height: 200px; }
-      .project-icon { align-self: start; display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; border-radius: 9999px; color: var(--green); background: var(--green-soft); }
+      .project-icon { align-self: start; display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; border-radius: 9999px; color: var(--orange); background: var(--orange-soft); }
       .project-icon svg { width: 1.35rem; height: 1.35rem; }
-      .project-kicker { margin: 0; color: rgba(137, 255, 159, 0.78); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; }
+      .project-kicker { margin: 0; color: rgba(249, 115, 22, 0.88); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; }
       .project-title { margin-top: 0.45rem; color: var(--text); font-size: 0.95rem; line-height: 1.35; font-weight: 700; }
       .project-summary { margin-top: 0.45rem; color: var(--muted); font-size: 0.8rem; line-height: 1.6; }
       .project-summary strong { color: var(--text); font-weight: 600; }
@@ -139,25 +145,27 @@
       .project-tech span { border-radius: 9999px; padding: 0.24rem 0.5rem; color: var(--faint); background: rgba(255,255,255,0.08); font-size: 0.66rem; font-weight: 600; }
       .project-links { display: flex; gap: 0.45rem; margin-top: 0.75rem; }
       .project-links .icon-action { width: auto; height: auto; gap: 0.35rem; border-radius: 9999px; padding: 0.35rem 0.6rem; font-size: 0.68rem; font-weight: 700; }
-      .project-visual { position: relative; display: flex; min-height: 200px; align-items: center; justify-content: center; overflow: hidden; border-radius: 16px; background: #1a241b; }
-      .project-visual::before { position: absolute; inset: 0; background-image: linear-gradient(rgba(137,255,159,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(137,255,159,0.07) 1px, transparent 1px); background-size: 24px 24px; content: ''; }
-      .visual-window { position: relative; width: 76%; overflow: hidden; border: 1px solid rgba(137,255,159,0.35); border-radius: 8px; background: rgba(17,18,16,0.88); box-shadow: 0 14px 30px rgba(0,0,0,0.32); }
-      .window-bar { display: flex; gap: 0.28rem; border-bottom: 1px solid rgba(137,255,159,0.18); padding: 0.45rem 0.55rem; }
-      .window-bar i { width: 0.34rem; height: 0.34rem; border-radius: 9999px; background: var(--green); opacity: 0.7; }
+      .project-visual { position: relative; display: flex; min-height: 200px; align-items: center; justify-content: center; overflow: hidden; border-radius: 16px; background: #171717; }
+      .project-visual::before { position: absolute; inset: 0; background-image: linear-gradient(rgba(249,115,22,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(249,115,22,0.07) 1px, transparent 1px); background-size: 24px 24px; content: ''; }
+      .project-visual.project-image-frame::before { display: none; }
+      .project-image { display: block; width: 100%; height: 200px; object-fit: cover; object-position: center; }
+      .visual-window { position: relative; width: 76%; overflow: hidden; border: 1px solid rgba(249,115,22,0.35); border-radius: 8px; background: rgba(11,11,11,0.88); box-shadow: 0 14px 30px rgba(0,0,0,0.32); }
+      .window-bar { display: flex; gap: 0.28rem; border-bottom: 1px solid rgba(249,115,22,0.18); padding: 0.45rem 0.55rem; }
+      .window-bar i { width: 0.34rem; height: 0.34rem; border-radius: 9999px; background: var(--orange); opacity: 0.7; }
       .terminal-lines { display: grid; gap: 0.38rem; padding: 0.8rem; }
-      .terminal-lines span { display: block; height: 0.3rem; border-radius: 9999px; background: rgba(137,255,159,0.55); }
+      .terminal-lines span { display: block; height: 0.3rem; border-radius: 9999px; background: rgba(249,115,22,0.55); }
       .terminal-lines span:nth-child(2) { width: 70%; opacity: 0.65; }
       .terminal-lines span:nth-child(3) { width: 86%; opacity: 0.45; }
       .terminal-lines span:nth-child(4) { width: 53%; opacity: 0.8; }
       .terminal-lines span:nth-child(5) { width: 76%; opacity: 0.4; }
       .virtual-stack { position: relative; display: grid; gap: 0.55rem; width: 72%; }
-      .virtual-stack div { display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(137,255,159,0.32); border-radius: 8px; padding: 0.7rem 0.8rem; color: rgba(137,255,159,0.84); background: rgba(17,18,16,0.84); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.62rem; }
-      .virtual-stack div::after { width: 0.4rem; height: 0.4rem; border-radius: 9999px; background: var(--green); box-shadow: 0 0 12px var(--green); content: ''; }
+      .virtual-stack div { display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(249,115,22,0.32); border-radius: 8px; padding: 0.7rem 0.8rem; color: rgba(255, 166, 110, 0.92); background: rgba(11,11,11,0.84); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.62rem; }
+      .virtual-stack div::after { width: 0.4rem; height: 0.4rem; border-radius: 9999px; background: var(--orange); box-shadow: 0 0 12px var(--orange); content: ''; }
       .network-map { position: relative; width: 76%; height: 74%; }
-      .network-map::before, .network-map::after { position: absolute; background: rgba(137,255,159,0.45); content: ''; }
+      .network-map::before, .network-map::after { position: absolute; background: rgba(249,115,22,0.45); content: ''; }
       .network-map::before { top: 50%; right: 15%; left: 15%; height: 1px; }
       .network-map::after { top: 18%; bottom: 18%; left: 50%; width: 1px; }
-      .network-node { position: absolute; display: flex; width: 42px; height: 42px; align-items: center; justify-content: center; border: 1px solid rgba(137,255,159,0.55); border-radius: 9999px; color: var(--green); background: rgba(17,18,16,0.9); box-shadow: 0 0 18px rgba(137,255,159,0.14); }
+      .network-node { position: absolute; display: flex; width: 42px; height: 42px; align-items: center; justify-content: center; border: 1px solid rgba(249,115,22,0.55); border-radius: 9999px; color: var(--orange); background: rgba(11,11,11,0.9); box-shadow: 0 0 18px rgba(249,115,22,0.14); }
       .network-node svg { width: 1.1rem; height: 1.1rem; }
       .network-node:nth-child(1) { top: 0; left: calc(50% - 21px); }
       .network-node:nth-child(2) { bottom: 0; left: 4%; }
@@ -170,12 +178,12 @@
       .contact-footer { border-top: 1px solid var(--border); padding-block: 1.9rem 2.6rem; }
       .footer-label { margin: 0 0 0.75rem; color: var(--muted); font-size: 0.82rem; }
       .footer-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem; }
-      .footer-meta .contact-pill { background: var(--green-strong); border-color: var(--green-strong); color: #102013; }
-      .footer-meta .contact-pill:hover { background: var(--green); border-color: var(--green); }
+      .footer-meta .contact-pill { background: var(--orange-strong); border-color: var(--orange-strong); color: #1a0d05; }
+      .footer-meta .contact-pill:hover { background: var(--orange); border-color: var(--orange); }
       .footer-meta .icon-action { background: transparent; }
       .footer-bottom { display: flex; justify-content: space-between; gap: 1rem; margin-top: 1.5rem; color: rgba(255,255,255,0.34); font-size: 0.68rem; }
-      .footer-bottom a { color: rgba(137,255,159,0.68); transition: color 160ms ease; }
-      .footer-bottom a:hover { color: var(--green); }
+      .footer-bottom a { color: rgba(249,115,22,0.78); transition: color 160ms ease; }
+      .footer-bottom a:hover { color: var(--orange); }
 
       @media (max-width: 800px) {
         .shell { width: min(100% - 2.5rem, 680px); }
@@ -221,6 +229,7 @@
           <a href="#formacion">Formación</a>
         </div>
         <a class="nav-contact" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
+        <button id="language-toggle" class="language-toggle" type="button" aria-pressed="false" aria-label="Cambiar a inglés">EN</button>
         <button id="menu-button" class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú">
           <svg id="menu-open-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" /></svg>
           <svg id="menu-close-icon" class="hidden" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"><path d="m6 6 12 12M18 6 6 18" stroke-linecap="round" /></svg>
@@ -239,7 +248,7 @@
     <main id="inicio" class="shell">
       <header class="profile-header">
         <div class="profile-avatar">
-          <img src="img/perfil.webp" alt="Fotografía de Andrés Eduardo Molina Ramírez" />
+          <img src="img/Perfil.webp" alt="Fotografía de Andrés Eduardo Molina Ramírez" />
         </div>
         <div>
           <div class="eyebrow">Disponible para contratación / proyectos</div>
@@ -247,8 +256,9 @@
           <p class="profile-role">Ingeniero de Sistemas / IT Specialist &amp; Consultor Freelance</p>
           <p class="profile-location"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.1 7-12A7 7 0 1 0 5 9c0 5.9 7 12 7 12Z" /><circle cx="12" cy="9" r="2.4" /></svg>Cartago, Costa Rica</p>
           <div class="profile-actions">
-            <a class="contact-pill" href="mailto:andresmolina.sys@outlook.com"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>andresmolina.sys@outlook.com</a>
-            <a class="icon-action" href="https://github.com/AndresMolina-Sys" target="_blank" rel="noopener noreferrer" aria-label="Visitar GitHub de Andrés Molina"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.77.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.76.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z" /></svg></a>
+             <a class="contact-pill" href="mailto:andresmolina.sys@outlook.com"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>andresmolina.sys@outlook.com</a>
+             <a class="icon-action w-8 h-8" href="docs/CV_AndrésMolina_2026.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir CV de Andrés Molina"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v6h6M8 13h8M8 17h5" /></svg></a>
+             <a class="icon-action" href="https://github.com/AndresMolina-Sys" target="_blank" rel="noopener noreferrer" aria-label="Visitar GitHub de Andrés Molina"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.77.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.76.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z" /></svg></a>
             <a class="icon-action" href="https://www.linkedin.com/in/andresmolina-sys" target="_blank" rel="noopener noreferrer" aria-label="Visitar LinkedIn de Andrés Molina"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M5.2 3.5A2.2 2.2 0 1 1 5.2 7.9a2.2 2.2 0 0 1 0-4.4ZM3.4 9.4h3.6v11.1H3.4V9.4Zm5.8 0h3.5v1.5h.1c.5-.9 1.7-1.9 3.5-1.9 3.7 0 4.4 2.4 4.4 5.6v5.9h-3.6v-5.2c0-1.2 0-2.8-1.8-2.8s-2.1 1.3-2.1 2.7v5.3H9.2V9.4Z" /></svg></a>
             <span class="availability">4 años de experiencia independiente</span>
           </div>
@@ -263,27 +273,45 @@
       </section>
 
       <section id="habilidades" class="skills-section section-divider" aria-labelledby="skills-title">
-        <h2 id="skills-title" class="section-heading">Tecnologías</h2>
-        <div class="skill-groups">
-          <div><p class="skill-group-title">Virtualización e infraestructura</p><div class="skill-list"><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M8 8h8M8 12h8M8 16h4" /></svg>Microsoft Hyper-V</span><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M8 8h8M8 12h8M8 16h4" /></svg>Oracle VirtualBox</span><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3" /><path d="M12 3v6m0 6v6M3 12h6m6 0h6M5.6 5.6l4.2 4.2m4.4 4.4 4.2 4.2m0-12.8-4.2 4.2m-4.4 4.4-4.2 4.2" /></svg>Redes de Computadoras</span><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M7 16h10M8 9h8" /></svg>Mantenimiento de Hardware</span></div></div>
-          <div><p class="skill-group-title">Sistemas y soporte</p><div class="skill-list"><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2" /><path d="M8 7h8M8 11h8M8 15h4" /></svg>Windows 7 / 10 / 11</span><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a7 7 0 0 0-7 7c0 4 2.5 5.2 2.5 7h9c0-1.8 2.5-3 2.5-7a7 7 0 0 0-7-7Z" /><path d="M9 21h6M8 17h8" /></svg>Soporte técnico L1/L2</span><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M7 8h4m-4 4h10m-10 4h6" /></svg>Suite Microsoft Office</span></div></div>
-          <div><p class="skill-group-title">Desarrollo web</p><div class="skill-list"><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14" stroke-linecap="round" stroke-linejoin="round" /></svg>HTML5</span><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14" stroke-linecap="round" stroke-linejoin="round" /></svg>CSS3</span><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14" stroke-linecap="round" stroke-linejoin="round" /></svg>JavaScript</span><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14" stroke-linecap="round" stroke-linejoin="round" /></svg>Git / GitHub</span></div></div>
-          <div><p class="skill-group-title">Idiomas</p><div class="skill-list"><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.2 2.4 3.4 5.4 3.4 9s-1.2 6.6-3.4 9c-2.2-2.4-3.4-5.4-3.4-9S9.8 5.4 12 3Z" /></svg>Español · Nativo</span><span class="skill-pill"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v14H4z" /><path d="M8 9h.01M12 9h.01M16 9h.01M8 13h.01M12 13h.01M16 13h.01" stroke-linecap="round" /></svg>Inglés · B2 / Upper-Intermediate</span></div></div>
+        <h2 id="skills-title" class="mb-8 flex items-center gap-3 text-2xl md:text-3xl font-bold text-white tracking-tight"><svg class="w-7 h-7 text-orange-500 fill-current flex-shrink-0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15" /></svg><span>Stack tecnológico</span></h2>
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-neutral-400 text-sm font-medium border-b border-dotted border-neutral-700 pb-1 w-max mb-4">Infraestructura y Virtualización</h3>
+            <div class="flex flex-wrap items-center gap-6 md:gap-8">
+              <div class="group flex items-center gap-2.5 text-sm font-medium text-white transition-colors duration-200 md:text-base"><svg class="h-5 w-5 shrink-0 text-orange-500 transition-all duration-200 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.55)]" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="13" rx="2" /><path d="M8 20h8M12 17v3M8 8h8M8 11h5" /></svg><span>Microsoft Hyper-V</span></div>
+              <div class="group flex items-center gap-2.5 text-sm font-medium text-white transition-colors duration-200 md:text-base"><img src="https://cdn.simpleicons.org/virtualbox/f97316" class="h-5 w-5 shrink-0 transition-all duration-200 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.55)]" alt="Oracle VirtualBox" /><span>Oracle VirtualBox</span></div>
+              <div class="group flex items-center gap-2.5 text-sm font-medium text-white transition-colors duration-200 md:text-base"><svg class="h-5 w-5 shrink-0 text-orange-500 transition-all duration-200 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.55)]" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2.5" /><circle cx="5" cy="7" r="1.5" /><circle cx="19" cy="7" r="1.5" /><circle cx="5" cy="17" r="1.5" /><circle cx="19" cy="17" r="1.5" /><path d="m6.3 7.8 3.5 2.8m4.4 0 3.5-2.8M9.8 13.4l-3.5 2.8m7.9-2.8 3.5 2.8" /></svg><span>Redes de Computadoras</span></div>
+              <div class="group flex items-center gap-2.5 text-sm font-medium text-white transition-colors duration-200 md:text-base"><svg class="h-5 w-5 shrink-0 text-orange-500 transition-all duration-200 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.55)]" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="6" width="12" height="12" rx="2" /><path d="M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4M9 9h6v6H9z" /></svg><span>Mantenimiento de Hardware</span></div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-neutral-400 text-sm font-medium border-b border-dotted border-neutral-700 pb-1 w-max mb-4">Sistemas y Soporte</h3>
+            <div class="flex flex-wrap items-center gap-6 md:gap-8">
+              <div class="group flex items-center gap-2.5 text-sm font-medium text-white transition-colors duration-200 md:text-base"><svg class="w-5 h-5 fill-current text-orange-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h11.25v11.25H0zm12.75 0H24v11.25H12.75zM0 12.75h11.25V24H0zm12.75 0H24V24H12.75z" /></svg><span>Windows (7 / 10 / 11)</span></div>
+              <div class="group flex items-center gap-2.5 text-sm font-medium text-white transition-colors duration-200 md:text-base"><svg class="h-5 w-5 shrink-0 text-orange-500 transition-all duration-200 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.55)]" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6.5a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H9l-5 3v-6.5Z" /><path d="M8 9h.01M12 9h.01M16 9h.01" stroke-linecap="round" /></svg><span>Soporte Técnico L1/L2</span></div>
+              <div class="group flex items-center gap-2.5 text-sm font-medium text-white transition-colors duration-200 md:text-base"><svg class="w-5 h-5 fill-current text-orange-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.16 2.45H9.7a1.16 1.16 0 0 0-1.16 1.16v2.33H2.84A1.16 1.16 0 0 0 1.68 7.1v9.8a1.16 1.16 0 0 0 1.16 1.16h5.7v2.34a1.16 1.16 0 0 0 1.16 1.15h11.46a1.16 1.16 0 0 0 1.16-1.15V3.61a1.16 1.16 0 0 0-1.16-1.16zm-11.46 2.32h10.3v14.46H9.7V18.1h3.14a1.16 1.16 0 0 0 1.16-1.16V7.1a1.16 1.16 0 0 0-1.16-1.16H9.7z" /></svg><span>Suite Microsoft Office</span></div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-neutral-400 text-sm font-medium border-b border-dotted border-neutral-700 pb-1 w-max mb-4">Desarrollo y Herramientas</h3>
+            <div class="flex flex-wrap items-center gap-6 md:gap-8">
+              <div class="group flex items-center gap-2.5 text-sm font-medium text-white transition-colors duration-200 md:text-base"><svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="none"><path d="M4 3.5h16l-1.6 13.5L12 21l-6.4-4L4 3.5z" stroke="#f97316" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /><text x="12" y="14.8" fill="#f97316" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="10.5" text-anchor="middle">5</text></svg><span class="text-white font-medium text-sm md:text-base">HTML</span></div>
+              <div class="group flex items-center gap-2.5 text-sm font-medium text-white transition-colors duration-200 md:text-base"><svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="none"><path d="M4 3.5h16l-1.6 13.5L12 21l-6.4-4L4 3.5z" stroke="#f97316" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /><text x="12" y="14.8" fill="#f97316" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="10.5" text-anchor="middle">3</text></svg><span class="text-white font-medium text-sm md:text-base">CSS</span></div>
+              <div class="group flex items-center gap-2.5 text-sm font-medium text-white transition-colors duration-200 md:text-base"><span class="text-orange-500 font-black text-xl leading-none select-none">JS</span><span>JavaScript</span></div>
+              <div class="group flex items-center gap-2.5 text-sm font-medium text-white transition-colors duration-200 md:text-base"><img src="https://cdn.simpleicons.org/git/f97316" class="w-5 h-5 shrink-0 transition-all duration-200 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.55)]" alt="Git" /><span>Git</span></div>
+              <div class="group flex items-center gap-2.5 text-sm font-medium text-white transition-colors duration-200 md:text-base"><img src="https://cdn.simpleicons.org/github/f97316" class="w-5 h-5 shrink-0 transition-all duration-200 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.55)]" alt="GitHub" /><span>GitHub</span></div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="experiencia" class="experience-section" aria-labelledby="experience-title">
         <h2 id="experience-title" class="section-heading">Experiencia</h2>
         <div class="record-list">
-          <article class="record">
-            <div class="record-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19V5m0 14h14M9 15V9m4 6V6m4 9v-4" stroke-linecap="round" stroke-linejoin="round" /></svg></div>
-            <div><h3 class="record-title">IT Specialist &amp; Consultor TI Freelance</h3><p class="record-subtitle">Consultoría, soporte e infraestructura para empresas del sector industrial y comercial.</p><p class="record-description">Resolución de incidencias de hardware y software, administración de entornos locales y virtuales, migración de sistemas Windows y desarrollo de activos web e interfaces internas.</p><div class="record-tags"><span class="record-tag">Soporte L1/L2</span><span class="record-tag">Hyper-V</span><span class="record-tag">VirtualBox</span><span class="record-tag">Windows</span></div></div>
-            <span class="record-date">Nov 2021 — Ene 2026</span>
-          </article>
           <article class="record featured">
-            <div class="record-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5m0 14h16M8 16v-5m4 5V7m4 9v-8" stroke-linecap="round" stroke-linejoin="round" /></svg></div>
+            <div class="record-icon"><img src="img/Creativa.webp" alt="Creativa RAAL Industrial" class="w-12 h-12 rounded-xl object-contain bg-neutral-900 border border-orange-500/20 p-1 flex-shrink-0" /></div>
             <div><h3 class="record-title">Creativa RAAL Industrial</h3><p class="record-subtitle">Caso destacado · soporte técnico y virtualización</p><p class="record-description">Acompañamiento para garantizar continuidad operativa, resolver incidencias y preparar entornos virtuales de prueba para administrar recursos con mayor control.</p><div class="record-tags"><span class="record-tag">Cliente industrial</span><span class="record-tag">Continuidad operativa</span><span class="record-tag">Entornos virtuales</span></div></div>
-            <span class="record-date">Proyecto destacado</span>
+            <span class="text-orange-500/90 bg-orange-950/40 border border-orange-900/40 text-xs px-2.5 py-1 rounded-md font-mono whitespace-nowrap">Nov 2021 — Actualidad</span>
           </article>
         </div>
       </section>
@@ -292,9 +320,9 @@
         <h2 id="projects-title" class="section-heading">Proyectos</h2>
         <div class="project-list">
           <article class="project">
-            <div class="project-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="16" height="6" rx="1.5" /><rect x="4" y="14" width="16" height="6" rx="1.5" /><path d="M8 7h.01M8 17h.01" stroke-linecap="round" /></svg></div>
-            <div><p class="project-kicker">01 / Virtualización</p><h3 class="project-title">Laboratorio virtual de pruebas con Hyper-V</h3><p class="project-summary"><strong>Problema:</strong> probar cambios sin afectar equipos de trabajo. <strong>Solución:</strong> entorno aislado para validar configuraciones y gestionar recursos con mayor control.</p><div class="project-tech"><span>Hyper-V</span><span>Windows</span><span>Virtualización</span></div><div class="project-links"><a class="icon-action" href="mailto:andresmolina.sys@outlook.com?subject=Consulta%20sobre%20Laboratorio%20virtual%20de%20pruebas">Caso <span aria-hidden="true">↗</span></a><a class="icon-action" href="https://github.com/AndresMolina-Sys" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div>
-            <div class="project-visual" role="img" aria-label="Visual abstracto de un laboratorio virtual con servidores"><div class="virtual-stack"><div>HYPER-V / HOST <span></span></div><div>WINDOWS / VM-01 <span></span></div><div>TEST / SNAPSHOT <span></span></div></div></div>
+            <div class="project-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><ellipse cx="12" cy="5" rx="7" ry="3" /><path d="M5 5v7c0 1.66 3.13 3 7 3s7-1.34 7-3V5M5 12v7c0 1.66 3.13 3 7 3s7-1.34 7-3v-7" /><path d="M8 8h.01M8 15h.01" stroke-linecap="round" /></svg></div>
+            <div><p class="project-kicker">01 / DESARROLLO DE SOFTWARE</p><h3 class="project-title">Sistema de Control de Inventario (CRUD)</h3><p class="project-summary"><strong>Problema:</strong> registro manual y descentralizado de existencias propenso a inconsistencias. <strong>Solución:</strong> aplicación de escritorio para la administración centralizada del inventario con persistencia en base de datos relacional y transacciones en tiempo real.</p><div class="project-tech"><span>C#</span><span>XAML / WPF</span><span>SQL Server</span></div><div class="project-links"><a class="icon-action" href="mailto:andresmolina.sys@outlook.com?subject=Consulta%20sobre%20Sistema%20de%20Control%20de%20Inventario">Detalles <span aria-hidden="true">↗</span></a><a class="icon-action" href="https://github.com/AndresMolina-Sys/InventarioApp" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div>
+            <div class="project-visual project-image-frame"><img class="project-image" src="img/proyecto-inventario.webp" alt="Panel de control del Sistema de Control de Inventario" /></div>
           </article>
           <article class="project">
             <div class="project-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14" stroke-linecap="round" stroke-linejoin="round" /></svg></div>
@@ -313,12 +341,12 @@
         <h2 id="education-title" class="section-heading">Formación</h2>
         <div class="record-list">
           <article class="record">
-            <div class="record-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m3 9 9-5 9 5-9 5-9-5Z" /><path d="M7 11.5V16c2.8 2.6 7.2 2.6 10 0v-4.5M21 9v6" stroke-linecap="round" stroke-linejoin="round" /></svg></div>
+            <div class="record-icon"><img src="img/UAM.webp" alt="Universidad Americana de Costa Rica" class="w-12 h-12 rounded-full object-contain bg-neutral-900 border border-orange-500/20 p-1 flex-shrink-0" /></div>
             <div><h3 class="record-title">Bachillerato en Ingeniería de Sistemas</h3><p class="record-subtitle">Universidad Americana de Costa Rica</p><p class="education-note"><strong>Formación universitaria</strong> en sistemas, tecnología y resolución de problemas.</p></div>
             <span class="record-date">Abril 2026</span>
           </article>
           <article class="record">
-            <div class="record-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m3 9 9-5 9 5-9 5-9-5Z" /><path d="M7 11.5V16c2.8 2.6 7.2 2.6 10 0v-4.5M21 9v6" stroke-linecap="round" stroke-linejoin="round" /></svg></div>
+            <div class="record-icon"><img src="img/CTP.webp" alt="CTP Fernando Volio Jiménez" class="w-12 h-12 rounded-full object-contain bg-neutral-900 border border-orange-500/20 p-1 flex-shrink-0" /></div>
             <div><h3 class="record-title">Técnico en Redes de Computadoras y Educación Diversificada</h3><p class="record-subtitle">CTP Fernando Volio Jiménez</p><p class="education-note"><strong>Fundamentos</strong> de conectividad, infraestructura y operación de redes.</p></div>
             <span class="record-date">Enero 2022</span>
           </article>
@@ -330,6 +358,7 @@
       <h2 id="contact-title" class="footer-label">Contacto</h2>
       <div class="footer-meta">
         <a class="contact-pill" href="mailto:andresmolina.sys@outlook.com"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>andresmolina.sys@outlook.com</a>
+        <a class="icon-action w-9 h-9 rounded-full" href="docs/CV_AndrésMolina_2026.pdf" target="_blank" rel="noopener noreferrer" title="Ver CV" aria-label="Ver CV de Andrés Molina"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v6h6M8 13h8M8 17h5" /></svg></a>
         <a class="icon-action" href="https://github.com/AndresMolina-Sys" target="_blank" rel="noopener noreferrer" aria-label="Visitar GitHub de Andrés Molina"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.77.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.76.84.12 1.91.12 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z" /></svg></a>
         <a class="icon-action" href="https://www.linkedin.com/in/andresmolina-sys" target="_blank" rel="noopener noreferrer" aria-label="Visitar LinkedIn de Andrés Molina"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M5.2 3.5A2.2 2.2 0 1 1 5.2 7.9a2.2 2.2 0 0 1 0-4.4ZM3.4 9.4h3.6v11.1H3.4V9.4Zm5.8 0h3.5v1.5h.1c.5-.9 1.7-1.9 3.5-1.9 3.7 0 4.4 2.4 4.4 5.6v5.9h-3.6v-5.2c0-1.2 0-2.8-1.8-2.8s-2.1 1.3-2.1 2.7v5.3H9.2V9.4Z" /></svg></a>
         <span class="availability">Cartago, Costa Rica</span>
@@ -355,6 +384,124 @@
       mobileNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
       window.addEventListener('resize', () => { if (window.innerWidth > 800) setMenu(false); });
       document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      const languageToggle = document.getElementById('language-toggle');
+      const languagePairs = [
+        ['Sobre mí', 'About me'],
+        ['Experiencia', 'Experience'],
+        ['Tecnologías', 'Technologies'],
+        ['Proyectos', 'Projects'],
+        ['Formación', 'Education'],
+        ['Contacto', 'Contact'],
+        ['Abrir menú', 'Open menu'],
+        ['Cerrar menú', 'Close menu'],
+        ['Disponible para contratación / proyectos', 'Available for hiring / projects'],
+        ['Ingeniero de Sistemas / IT Specialist & Consultor Freelance', 'Systems Engineer / IT Specialist & Freelance Consultant'],
+        ['4 años de experiencia independiente', '4 years of independent experience'],
+        ['Profesional en TI con cuatro años de experiencia independiente y freelance brindando soporte técnico especializado, optimización de infraestructura, despliegue de entornos virtuales y desarrollo de interfaces web.', 'IT professional with four years of independent and freelance experience providing specialized technical support, infrastructure optimization, virtual environment deployment, and web interface development.'],
+        ['Proactivo, con capacidad de autogestión y nivel de inglés B2. Me enfoco en convertir problemas operativos en soluciones claras, documentadas y sostenibles para las personas y equipos que las utilizan.', 'Proactive and self-managed, with B2 English proficiency. I focus on turning operational challenges into clear, documented, and sustainable solutions for the people and teams who use them.'],
+        ['Infraestructura', 'Infrastructure'],
+        ['Virtualización', 'Virtualization'],
+        ['Redes y soporte', 'Networking & support'],
+        ['Interfaces web', 'Web interfaces'],
+        ['Stack tecnológico', 'Technology stack'],
+        ['Infraestructura y Virtualización', 'Infrastructure & Virtualization'],
+        ['Sistemas y Soporte', 'Systems & Support'],
+        ['Desarrollo y Herramientas', 'Development & Tools'],
+        ['Redes de Computadoras', 'Computer Networking'],
+        ['Mantenimiento de Hardware', 'Hardware Maintenance'],
+        ['Soporte Técnico L1/L2', 'L1/L2 Technical Support'],
+        ['IT Specialist & Consultor TI Freelance', 'IT Specialist & Freelance IT Consultant'],
+        ['Consultoría, soporte e infraestructura para empresas del sector industrial y comercial.', 'Consulting, support, and infrastructure services for industrial and commercial companies.'],
+        ['Resolución de incidencias de hardware y software, administración de entornos locales y virtuales, migración de sistemas Windows y desarrollo de activos web e interfaces internas.', 'Hardware and software troubleshooting, administration of local and virtual environments, Windows system migrations, and development of web assets and internal interfaces.'],
+        ['Caso destacado · soporte técnico y virtualización', 'Featured case · technical support and virtualization'],
+        ['Acompañamiento para garantizar continuidad operativa, resolver incidencias y preparar entornos virtuales de prueba para administrar recursos con mayor control.', 'Support to ensure operational continuity, resolve incidents, and prepare virtual test environments for better resource control.'],
+        ['Cliente industrial', 'Industrial client'],
+        ['Continuidad operativa', 'Operational continuity'],
+        ['Entornos virtuales', 'Virtual environments'],
+        ['Proyecto destacado', 'Featured project'],
+        ['Nov 2021 — Ene 2026', 'Nov 2021 — Jan 2026'],
+        ['01 / DESARROLLO DE SOFTWARE', '01 / SOFTWARE DEVELOPMENT'],
+        ['Sistema de Control de Inventario (CRUD)', 'Inventory Control System (CRUD)'],
+        ['registro manual y descentralizado de existencias propenso a inconsistencias.', 'manual and decentralized stock records prone to inconsistencies.'],
+        ['aplicación de escritorio para la administración centralizada del inventario con persistencia en base de datos relacional y transacciones en tiempo real.', 'desktop application for centralized inventory management with relational database persistence and real-time transactions.'],
+        ['Detalles', 'Details'],
+        ['01 / Virtualización', '01 / Virtualization'],
+        ['02 / Desarrollo web', '02 / Web development'],
+        ['03 / Soporte TI', '03 / IT support'],
+        ['Laboratorio virtual de pruebas con Hyper-V', 'Hyper-V virtual test lab'],
+        ['Módulos web para procesos internos', 'Web modules for internal processes'],
+        ['Infraestructura y migración de red y endpoints', 'Network and endpoint infrastructure migration'],
+        ['Problema:', 'Problem:'],
+        ['Solución:', 'Solution:'],
+        ['probar cambios sin afectar equipos de trabajo.', 'test changes without affecting workstations.'],
+        ['tareas internas dispersas y poco visibles.', 'scattered and hard-to-track internal tasks.'],
+        ['equipos y sistemas con necesidades distintas.', 'equipment and systems with different needs.'],
+        ['entorno aislado para validar configuraciones y gestionar recursos con mayor control.', 'isolated environment to validate configurations and manage resources with greater control.'],
+        ['interfaces ligeras para centralizar información y mejorar el flujo de trabajo.', 'lightweight interfaces to centralize information and improve workflow.'],
+        ['migración, mantenimiento y soporte de endpoints Windows con una operación más consistente.', 'Windows endpoint migration, maintenance, and support for more consistent operations.'],
+        ['Caso', 'Case'],
+        ['Wireframe de un sistema de inventario con tabla de registros', 'Wireframe of an inventory system with a records table'],
+        ['Formación universitaria', 'University education'],
+        ['en sistemas, tecnología y resolución de problemas.', 'in systems, technology, and problem solving.'],
+        ['Bachillerato en Ingeniería de Sistemas', "Bachelor's Degree in Systems Engineering"],
+        ['Técnico en Redes de Computadoras y Educación Diversificada', 'Computer Networking Technician and General Education'],
+        ['Fundamentos', 'Foundations'],
+        ['de conectividad, infraestructura y operación de redes.', 'of connectivity, infrastructure, and network operations.'],
+        ['Abril 2026', 'April 2026'],
+        ['Enero 2022', 'January 2022'],
+        ['Volver arriba ↑', 'Back to top ↑']
+      ];
+
+      const languageLookup = {
+        en: Object.fromEntries(languagePairs.map(([spanish, english]) => [spanish, english])),
+        es: Object.fromEntries(languagePairs.map(([spanish, english]) => [english, spanish]))
+      };
+
+      const projectVisualLabels = {
+        es: [
+          'Visual abstracto de un laboratorio virtual con servidores',
+          'Visual abstracto de una interfaz web interna',
+          'Visual abstracto de una red conectando equipos y servidores'
+        ],
+        en: [
+          'Abstract visual of a virtual lab with servers',
+          'Abstract visual of an internal web interface',
+          'Abstract visual of a network connecting devices and servers'
+        ]
+      };
+
+      function translateTextNodes(language) {
+        const lookup = languageLookup[language];
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        let node;
+
+        while ((node = walker.nextNode())) {
+          if (node.parentElement?.closest('script, style')) continue;
+          const original = node.nodeValue;
+          const trimmed = original.trim();
+          const translated = lookup[trimmed];
+          if (translated && translated !== trimmed) node.nodeValue = original.replace(trimmed, translated);
+        }
+      }
+
+      function setLanguage(language) {
+        translateTextNodes(language);
+        document.documentElement.lang = language;
+        document.title = language === 'en' ? 'Andrés Eduardo Molina Ramírez · Portfolio' : 'Andrés Eduardo Molina Ramírez · Portafolio';
+        document.querySelector('nav').setAttribute('aria-label', language === 'en' ? 'Main navigation' : 'Navegación principal');
+        languageToggle.textContent = language === 'es' ? 'EN' : 'ES';
+        languageToggle.setAttribute('aria-pressed', String(language === 'en'));
+        languageToggle.setAttribute('aria-label', language === 'es' ? 'Cambiar a inglés' : 'Switch to Spanish');
+        menuButton.setAttribute('aria-label', mobileNav.classList.contains('open') ? (language === 'en' ? 'Close menu' : 'Cerrar menú') : (language === 'en' ? 'Open menu' : 'Abrir menú'));
+        document.querySelectorAll('.project-visual').forEach((visual, index) => visual.setAttribute('aria-label', projectVisualLabels[language][index]));
+      }
+
+      let currentLanguage = 'es';
+      languageToggle.addEventListener('click', () => {
+        currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
+        setLanguage(currentLanguage);
+      });
     </script>
   </body>
 </html>

@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
 import { CV, EMAIL, GITHUB, LINKEDIN, skillGroups, translations } from './data.js';
-import { SiCss, SiGit, SiGithub, SiHtml5, SiJavascript, SiVirtualbox } from 'react-icons/si';
-import { DiWindows } from 'react-icons/di';
-import { TbBrandCSharp } from 'react-icons/tb';
+import { SiGit, SiGithub, SiHtml5, SiJavascript, SiVirtualbox } from 'react-icons/si';
+import { DiCss3Full, DiWindows } from 'react-icons/di';
 
 const brandIcons = {
   html: SiHtml5,
-  css: SiCss,
+  css: DiCss3Full,
   javascript: SiJavascript,
-  csharp: TbBrandCSharp,
   git: SiGit,
   github: SiGithub,
   windows: DiWindows,

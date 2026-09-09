@@ -1,10 +1,27 @@
 import { useEffect, useState } from 'react';
 import { CV, EMAIL, GITHUB, LINKEDIN, skillGroups, translations } from './data.js';
+import { SiCss, SiGit, SiGithub, SiHtml5, SiJavascript, SiVirtualbox } from 'react-icons/si';
+import { DiWindows } from 'react-icons/di';
+import { TbBrandCSharp } from 'react-icons/tb';
+
+const brandIcons = {
+  html: SiHtml5,
+  css: SiCss,
+  javascript: SiJavascript,
+  csharp: TbBrandCSharp,
+  git: SiGit,
+  github: SiGithub,
+  windows: DiWindows,
+  virtualbox: SiVirtualbox
+};
 
 function Icon({ name, className = '', label }) {
   const base = { className, viewBox: '0 0 24 24', fill: 'none' };
   const accessible = label ? { role: 'img', 'aria-label': label } : { 'aria-hidden': 'true' };
   const stroke = { stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round' };
+  const BrandIcon = brandIcons[name];
+
+  if (BrandIcon) return <BrandIcon className={className} {...accessible} />;
 
   switch (name) {
     case 'location': return <svg {...base} {...accessible} {...stroke}><path d="M12 21s7-6.1 7-12A7 7 0 1 0 5 9c0 5.9 7 12 7 12Z" /><circle cx="12" cy="9" r="2.4" /></svg>;

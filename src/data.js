@@ -23,7 +23,7 @@ export const translations = {
       paragraphTwo: 'Proactivo, con capacidad de autogestión y nivel de inglés B2. Me enfoco en convertir problemas operativos en soluciones claras, documentadas y sostenibles para las personas y equipos que las utilizan.',
       facts: ['Infraestructura', 'Virtualización', 'Redes y soporte', 'Interfaces web']
     },
-    skills: { title: 'Stack tecnológico', groups: ['Infraestructura y Virtualización', 'Sistemas y Soporte', 'Desarrollo y Herramientas'] },
+    skills: { title: 'Stack tecnológico', groups: ['Infraestructura y Virtualización', 'Sistemas y Soporte', 'Desarrollo y Herramientas'], learning: 'Actualmente aprendiendo' },
     experience: {
       title: 'Experiencia', company: 'Creativa RAAL Industrial', subtitle: 'Caso destacado · soporte técnico y virtualización',
       description: 'Acompañamiento para garantizar continuidad operativa, resolver incidencias y preparar entornos virtuales de prueba para administrar recursos con mayor control.',
@@ -65,7 +65,7 @@ export const translations = {
       paragraphTwo: 'Proactive and self-managed, with B2 English proficiency. I focus on turning operational challenges into clear, documented, and sustainable solutions for the people and teams who use them.',
       facts: ['Infrastructure', 'Virtualization', 'Networking & support', 'Web interfaces']
     },
-    skills: { title: 'Technology stack', groups: ['Infrastructure & Virtualization', 'Systems & Support', 'Development & Tools'] },
+    skills: { title: 'Technology stack', groups: ['Infrastructure & Virtualization', 'Systems & Support', 'Development & Tools'], learning: 'Currently learning' },
     experience: {
       title: 'Experience', company: 'Creativa RAAL Industrial', subtitle: 'Featured case · technical support and virtualization',
       description: 'Support to ensure operational continuity, resolve incidents, and prepare virtual test environments for better resource control.',

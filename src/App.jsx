@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CV, EMAIL, GITHUB, LINKEDIN, skillGroups, translations } from './data.js';
-import { SiCss, SiGit, SiGithub, SiHtml5, SiJavascript, SiVirtualbox } from 'react-icons/si';
+import { SiCss, SiDocker, SiGit, SiGithub, SiHtml5, SiJavascript, SiNodedotjs, SiReact, SiVirtualbox } from 'react-icons/si';
 import { DiWindows } from 'react-icons/di';
 
 const brandIcons = {
@@ -10,7 +10,10 @@ const brandIcons = {
   git: SiGit,
   github: SiGithub,
   windows: DiWindows,
-  virtualbox: SiVirtualbox
+  virtualbox: SiVirtualbox,
+  docker: SiDocker,
+  react: SiReact,
+  node: SiNodedotjs
 };
 
 function Icon({ name, className = '', label }) {
@@ -72,7 +75,8 @@ function About({ t }) {
 }
 
 function TechnologyStack({ t }) {
-  return <section id="habilidades" className="skills-section section-divider reveal" aria-labelledby="skills-title"><h2 id="skills-title" className="stack-heading"><Icon name="fire" /><span>{t.skills.title}</span></h2><div className="skill-groups">{skillGroups.map((group, groupIndex) => <div className="skill-group" key={t.skills.groups[groupIndex]}><h3 className="skill-group-title">{t.skills.groups[groupIndex]}</h3><div className="skill-row">{group.items.map((item) => <div className="skill-item group" key={item.label}><Icon name={item.icon} /><span>{item.label}</span></div>)}</div></div>)}</div></section>;
+  const learningTools = [{ label: 'Docker', icon: 'docker' }, { label: 'React', icon: 'react' }, { label: 'Node.js', icon: 'node' }];
+  return <section id="habilidades" className="skills-section section-divider reveal" aria-labelledby="skills-title"><h2 id="skills-title" className="stack-heading"><Icon name="fire" /><span>{t.skills.title}</span></h2><div className="skill-groups">{skillGroups.map((group, groupIndex) => <div className="skill-group" key={t.skills.groups[groupIndex]}><h3 className="skill-group-title">{t.skills.groups[groupIndex]}</h3><div className="skill-row">{group.items.map((item) => <div className="skill-item group" key={item.label}><Icon name={item.icon} /><span>{item.label}</span></div>)}</div></div>)}<div className="skill-group learning-group"><h3 className="skill-group-title">{t.skills.learning}</h3><div className="skill-row">{learningTools.map((item) => <div className="skill-item group" key={item.label}><Icon name={item.icon} /><span>{item.label}</span></div>)}</div></div></div></section>;
 }
 
 function Experience({ t }) {

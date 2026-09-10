@@ -4,7 +4,7 @@ import { createNoise2D } from 'simplex-noise';
 const POINT_GAP = 8;
 
 export default function WavesBackground({
-  strokeColor = '#f97316',
+  strokeColor = '#737373',
   backgroundColor = '#0b0b0b',
   pointerSize = 0.35
 }) {
@@ -61,7 +61,7 @@ export default function WavesBackground({
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         path.setAttribute('fill', 'none');
         path.setAttribute('stroke', strokeColor);
-        path.setAttribute('stroke-opacity', '0.24');
+        path.setAttribute('stroke-opacity', '0.12');
         path.setAttribute('stroke-width', '1');
         svg.appendChild(path);
         pathsRef.current.push(path);

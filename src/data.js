@@ -5,7 +5,7 @@ export const CV = '/docs/CV_AndrésMolina_2026.pdf';
 
 export const translations = {
   es: {
-    nav: { about: 'Sobre mí', experience: 'Experiencia', skills: 'Tecnologías', projects: 'Proyectos', education: 'Formación', contact: 'Contacto', contactArrow: 'Contacto ↗' },
+    nav: { about: 'Sobre mí', experience: 'Experiencia', skills: 'Tecnologías', projects: 'Proyectos', education: 'Formación', cv: 'Mi CV', contact: 'Contacto', contactArrow: 'Contacto ↗' },
     menu: { open: 'Abrir menú', close: 'Cerrar menú' },
     language: { switchToEnglish: 'Cambiar a inglés', switchToSpanish: 'Cambiar a español' },
     hero: {
@@ -47,7 +47,7 @@ export const translations = {
     footer: { title: 'Contacto', cv: 'Ver CV', github: 'Visitar GitHub de Andrés Molina', linkedin: 'Visitar LinkedIn de Andrés Molina', location: 'Cartago, Costa Rica', back: 'Volver arriba ↑' }
   },
   en: {
-    nav: { about: 'About me', experience: 'Experience', skills: 'Technologies', projects: 'Projects', education: 'Education', contact: 'Contact', contactArrow: 'Contact ↗' },
+    nav: { about: 'About me', experience: 'Experience', skills: 'Technologies', projects: 'Projects', education: 'Education', cv: 'My CV', contact: 'Contact', contactArrow: 'Contact ↗' },
     menu: { open: 'Open menu', close: 'Close menu' },
     language: { switchToEnglish: 'Cambiar a inglés', switchToSpanish: 'Switch to Spanish' },
     hero: {

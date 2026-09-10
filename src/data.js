@@ -93,5 +93,5 @@ export const translations = {
 export const skillGroups = [
   { items: [{ label: 'Microsoft Hyper-V', icon: 'monitor' }, { label: 'Oracle VirtualBox', icon: 'virtualbox' }, { label: 'Redes de Computadoras', icon: 'network' }, { label: 'Mantenimiento de Hardware', icon: 'chip' }] },
   { items: [{ label: 'Windows (7 / 10 / 11)', icon: 'windows' }, { label: 'Soporte Técnico L1/L2', icon: 'support' }, { label: 'Suite Microsoft Office', icon: 'office' }] },
-  { items: [{ label: 'HTML', icon: 'html' }, { label: 'CSS', icon: 'css' }, { label: 'JavaScript', icon: 'javascript' }, { label: 'C#', icon: 'csharp' }, { label: 'Git', icon: 'git' }, { label: 'GitHub', icon: 'github' }] }
+  { items: [{ label: 'HTML', icon: 'html' }, { label: 'CSS', icon: 'css' }, { label: 'JavaScript', icon: 'javascript' }, { label: 'C#', icon: 'csharp' }, { label: 'SQL', icon: 'database' }, { label: 'Git', icon: 'git' }, { label: 'GitHub', icon: 'github' }] }
 ];

@@ -105,6 +105,9 @@ export default function WavesBackground({
       if (touch) updateMouse(touch.clientX, touch.clientY);
     };
 
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const motionScale = reducedMotion ? 0.38 : 1;
+
     const movePoints = (time) => {
       const mouse = mouseRef.current;
       linesRef.current.forEach((points) => {
@@ -173,7 +176,7 @@ export default function WavesBackground({
       container.style.setProperty('--x', `${mouse.sx}px`);
       container.style.setProperty('--y', `${mouse.sy}px`);
 
-      movePoints(time);
+      movePoints(time * motionScale);
       drawLines();
       animationRef.current = requestAnimationFrame(tick);
     };
@@ -182,13 +185,7 @@ export default function WavesBackground({
     window.addEventListener('resize', resize);
     window.addEventListener('mousemove', onMouseMove, { passive: true });
     window.addEventListener('touchmove', onTouchMove, { passive: true });
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reducedMotion) {
-      movePoints(0);
-      drawLines();
-    } else {
-      animationRef.current = requestAnimationFrame(tick);
-    }
+    animationRef.current = requestAnimationFrame(tick);
 
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CV, EMAIL, GITHUB, LINKEDIN, skillGroups, translations } from './data.js';
+import WavesBackground from './components/WavesBackground.jsx';
 import { SiCss, SiDocker, SiGit, SiGithub, SiHtml5, SiJavascript, SiNodedotjs, SiReact, SiVirtualbox } from 'react-icons/si';
 import { DiWindows } from 'react-icons/di';
 
@@ -116,5 +117,5 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
-  return <><Navbar t={t} language={language} onLanguageChange={setLanguage} /><main id="inicio" className="shell"><Hero t={t} /><About t={t} /><TechnologyStack t={t} /><Experience t={t} /><Projects t={t} /><Education t={t} /></main><ContactFooter t={t} /></>;
+  return <><WavesBackground /><div className="app-content"><Navbar t={t} language={language} onLanguageChange={setLanguage} /><main id="inicio" className="shell"><Hero t={t} /><About t={t} /><TechnologyStack t={t} /><Experience t={t} /><Projects t={t} /><Education t={t} /></main><ContactFooter t={t} /></div></>;
 }

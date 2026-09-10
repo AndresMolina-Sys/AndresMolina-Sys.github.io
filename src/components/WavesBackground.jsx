@@ -19,7 +19,8 @@ export default function WavesBackground({
     sy: 0,
     vs: 0,
     a: 0,
-    set: false
+    set: false,
+    active: false
   });
   const pathsRef = useRef([]);
   const linesRef = useRef([]);
@@ -60,7 +61,7 @@ export default function WavesBackground({
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         path.setAttribute('fill', 'none');
         path.setAttribute('stroke', strokeColor);
-        path.setAttribute('stroke-opacity', '0.18');
+        path.setAttribute('stroke-opacity', '0.24');
         path.setAttribute('stroke-width', '1');
         svg.appendChild(path);
         pathsRef.current.push(path);
@@ -84,6 +85,7 @@ export default function WavesBackground({
       const mouse = mouseRef.current;
       mouse.x = x - bounds.left;
       mouse.y = y - bounds.top;
+      mouse.active = true;
 
       if (!mouse.set) {
         mouse.sx = mouse.x;
@@ -108,8 +110,8 @@ export default function WavesBackground({
       linesRef.current.forEach((points) => {
         points.forEach((point) => {
           const movement = noise(
-            (point.x + time * 0.008) * 0.003,
-            (point.y + time * 0.003) * 0.002
+            (point.x + time * 0.04) * 0.003,
+            (point.y + time * 0.02) * 0.002
           ) * 8;
 
           point.wave.x = Math.cos(movement) * 12;
@@ -118,19 +120,21 @@ export default function WavesBackground({
           const dx = point.x - mouse.sx;
           const dy = point.y - mouse.sy;
           const distance = Math.hypot(dx, dy);
-          const radius = Math.max(175, mouse.vs);
+          const radius = 260;
 
-          if (distance < radius) {
+          if (mouse.active && distance < radius) {
             const strength = 1 - distance / radius;
-            const force = Math.cos(distance * 0.001) * strength;
-            point.cursor.vx += Math.cos(mouse.a) * force * radius * mouse.vs * 0.00035;
-            point.cursor.vy += Math.sin(mouse.a) * force * radius * mouse.vs * 0.00035;
+            const safeDistance = Math.max(distance, 1);
+            const push = strength * 0.12;
+            const motionPush = strength * Math.min(mouse.vs, 30) * 0.014;
+            point.cursor.vx += (dx / safeDistance) * push + Math.cos(mouse.a) * motionPush;
+            point.cursor.vy += (dy / safeDistance) * push + Math.sin(mouse.a) * motionPush;
           }
 
-          point.cursor.vx += -point.cursor.x * 0.01;
-          point.cursor.vy += -point.cursor.y * 0.01;
-          point.cursor.vx *= 0.95;
-          point.cursor.vy *= 0.95;
+          point.cursor.vx += -point.cursor.x * 0.015;
+          point.cursor.vy += -point.cursor.y * 0.015;
+          point.cursor.vx *= 0.93;
+          point.cursor.vy *= 0.93;
           point.cursor.x = Math.max(-50, Math.min(50, point.cursor.x + point.cursor.vx));
           point.cursor.y = Math.max(-50, Math.min(50, point.cursor.y + point.cursor.vy));
         });

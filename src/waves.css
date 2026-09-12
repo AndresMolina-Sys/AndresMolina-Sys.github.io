@@ -1,1 +1,1 @@
-.app-content{position:relative;z-index:1}.waves-background{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}.waves-svg{display:block;width:100%;height:100%;opacity:.76}.waves-pointer{position:absolute;top:0;left:0;border-radius:9999px;box-shadow:0 0 10px rgba(163,163,163,.35);transform:translate3d(calc(var(--x) - 50%),calc(var(--y) - 50%),0);will-change:transform}
+.app-content{position:relative;z-index:1}.waves-background{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}.waves-canvas{display:block;width:100%;height:100%}

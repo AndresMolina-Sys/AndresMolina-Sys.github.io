@@ -30,9 +30,10 @@ export const translations = {
       tags: ['Cliente industrial', 'Continuidad operativa', 'Entornos virtuales'], date: 'Nov 2021 — Actualidad'
     },
     projects: {
-      title: 'Proyectos', problem: 'Problema:', solution: 'Solución:', details: 'Detalles', case: 'Caso', github: 'GitHub',
+      title: 'Proyectos', problem: 'Problema:', solution: 'Solución:', details: 'Detalles', case: 'Caso', github: 'GitHub', demo: 'Demo',
       items: [
-        { kicker: '01 / DESARROLLO DE SOFTWARE', title: 'Sistema de Control de Inventario (CRUD)', problem: 'registro manual y descentralizado de existencias propenso a inconsistencias.', solution: 'aplicación de escritorio para la administración centralizada del inventario con persistencia en base de datos relacional y transacciones en tiempo real.', tech: ['C#', 'XAML / WPF', 'SQL Server'], subject: 'Consulta sobre Sistema de Control de Inventario', repo: 'https://github.com/AndresMolina-Sys/InventarioApp', image: '/img/proyecto-inventario.webp', imageAlt: 'Panel de control del Sistema de Control de Inventario' }
+        { kicker: '01 / DESARROLLO DE SOFTWARE', title: 'Sistema de Control de Inventario (CRUD)', problem: 'registro manual y descentralizado de existencias propenso a inconsistencias.', solution: 'aplicación de escritorio para la administración centralizada del inventario con persistencia en base de datos relacional y transacciones en tiempo real.', tech: ['C#', 'XAML / WPF', 'SQL Server'], subject: 'Consulta sobre Sistema de Control de Inventario', icon: 'database', repo: 'https://github.com/AndresMolina-Sys/InventarioApp', image: '/img/proyecto-inventario.webp', imageAlt: 'Panel de control del Sistema de Control de Inventario' },
+        { kicker: '02 / INFRAESTRUCTURA Y REDES', title: 'Dashboard de Monitoreo de Red', problem: 'la disponibilidad, latencia y pérdida de paquetes de los dispositivos necesitaba una vista clara y accionable.', solution: 'dashboard full-stack para consultar estados de nodos, métricas de latencia y pérdida de paquetes con estados asíncronos explícitos.', tech: ['React', 'TypeScript', 'Vite', 'Recharts', 'ASP.NET Core', 'Docker'], subject: 'Consulta sobre Dashboard de Monitoreo de Red', icon: 'network', repo: 'https://github.com/AndresMolina-Sys/network-monitoring-dashboard', demo: 'https://network-monitoring-dashboard-zeta.vercel.app/', visual: 'network', visualAlt: 'Visual abstracto de un dashboard de monitoreo de red' }
       ]
     },
     education: {
@@ -70,9 +71,10 @@ export const translations = {
       tags: ['Industrial client', 'Operational continuity', 'Virtual environments'], date: 'Nov 2021 — Present'
     },
     projects: {
-      title: 'Projects', problem: 'Problem:', solution: 'Solution:', details: 'Details', case: 'Case', github: 'GitHub',
+      title: 'Projects', problem: 'Problem:', solution: 'Solution:', details: 'Details', case: 'Case', github: 'GitHub', demo: 'Live demo',
       items: [
-        { kicker: '01 / SOFTWARE DEVELOPMENT', title: 'Inventory Control System (CRUD)', problem: 'manual and decentralized stock records prone to inconsistencies.', solution: 'desktop application for centralized inventory management with relational database persistence and real-time transactions.', tech: ['C#', 'XAML / WPF', 'SQL Server'], subject: 'Inventory Control System inquiry', repo: 'https://github.com/AndresMolina-Sys/InventarioApp', image: '/img/proyecto-inventario.webp', imageAlt: 'Inventory Control System dashboard' }
+        { kicker: '01 / SOFTWARE DEVELOPMENT', title: 'Inventory Control System (CRUD)', problem: 'manual and decentralized stock records prone to inconsistencies.', solution: 'desktop application for centralized inventory management with relational database persistence and real-time transactions.', tech: ['C#', 'XAML / WPF', 'SQL Server'], subject: 'Inventory Control System inquiry', icon: 'database', repo: 'https://github.com/AndresMolina-Sys/InventarioApp', image: '/img/proyecto-inventario.webp', imageAlt: 'Inventory Control System dashboard' },
+        { kicker: '02 / INFRASTRUCTURE & NETWORKING', title: 'Network Monitoring Dashboard', problem: 'device availability, latency, and packet loss needed a clear, actionable view.', solution: 'full-stack dashboard for reviewing node status, latency metrics, and packet loss with explicit asynchronous states.', tech: ['React', 'TypeScript', 'Vite', 'Recharts', 'ASP.NET Core', 'Docker'], subject: 'Network Monitoring Dashboard inquiry', icon: 'network', repo: 'https://github.com/AndresMolina-Sys/network-monitoring-dashboard', demo: 'https://network-monitoring-dashboard-zeta.vercel.app/', visual: 'network', visualAlt: 'Abstract visual of a network monitoring dashboard' }
       ]
     },
     education: {
